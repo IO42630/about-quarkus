@@ -1,0 +1,22 @@
+= About Quarkus
+:toc:
+
+=== Goals
+* Create 1..5 services.
+* Implement event-based flow.
+
+
+
+=== General
+
+
+* uses `Undertow` (webserver)
+
+
+ANNOTATION	INITIALIZATION TIME	INSTANCES
+@ApplicationScoped	When a method on the injected instance gets called.	One per application.
+@Singleton	When injected into parent.	One per application.
+@Dependent	When injected into parent.	For every injection point.
+@RequestScoped	When a method on the injected instance gets called.	For every HTTP request.
+@SessionScoped	When a method on the injected instance gets called.	For every undertow session.
+Custome Scope	Dependend on implementation.	Dependend on implementation.
